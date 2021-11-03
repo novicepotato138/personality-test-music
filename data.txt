@@ -1,0 +1,2 @@
+location,gender,isMusician,age,Mellow,Unpretentious,Sophisticated,Intense,Contemporary
+Malaysia,Male,Yes,Under 18 years old,2.0,1.0,1.0,1.0,1.0
