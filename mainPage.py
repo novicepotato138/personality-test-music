@@ -7,8 +7,11 @@ import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from email.mime.base import MIMEBase
+from email.mime.application import MIMEApplication
 from email import encoders
 import pickle
+
+st.set_page_config(layout='wide')
 
 st.title("Predict Your Personality Through Your Music Preference")
 model = pickle.load(open('pickle_model.pkl','rb'))
@@ -149,7 +152,7 @@ def predict():
 
 
     # forming DataFrame for prediction
-    txtFile = open(r'data.txt', 'w')
+    txtFile = open(r'data.csv', 'w')
     txtFile.write("location,gender,isMusician,age,Mellow,Unpretentious,Sophisticated,Intense,Contemporary\n")
     txtFile.write(location + ',' + gender + ',' + isMusician + ',' + age + ',' + 
     str(mellow) + ',' + str(unpretentious) + ',' + str(sophisticated) + ',' + str(intense) + ',' + str(contemporary))
@@ -157,7 +160,7 @@ def predict():
 
 
     # perform prediction
-    x_value = pd.read_csv("data.txt")
+    x_value = pd.read_csv("data.csv")
     st.dataframe(data=x_value)
     label = ['Openness to Experience (O)', 'Conscientiousness (C)', 'Extroversion (E)', 'Agreableness (A)', 'Neuroticism (N)']
     
@@ -208,9 +211,64 @@ def predict():
     st.markdown("• **Openness to Experience (O)** is the personality trait of seeking new experience and intellectual pursuits. High scores may day dream a lot. Low scorers may be very down to earth.")
     st.header(" ")
 
+def email():
+    x = datetime.datetime.now()
+    time_msg = x.strftime("%c")
+    attachmentmsg = x.strftime('%x-%X')
 
+    mail_content = '''Attachment indicates new submission from the questionnaire site as following timing: ''' + time_msg
+
+    #The mail addresses and password
+    sender_address = 'bananaate12138@gmail.com'
+    sender_pass = 'hmkskggnsyogrcxp'
+    receiver_address = 'jessywoon@gmail.com'
+
+    #Setup the MIME
+    message = MIMEMultipart()
+    message['From'] = sender_address
+    message['To'] = receiver_address
+    message['Subject'] = "[Questionnaire entry] " + time_msg
+
+    #The subject line
+    #The body and the attachments for the mail
+    message.attach(MIMEText(mail_content, 'plain'))
+    attach_file_name = 'data.csv'
+    # filename = 'entry-%x-%X'
+
+    # attach_file = open(attach_file_name, 'rb') 
+    
+    # # Open the file as binary mode
+
+    # payload = MIMEBase('application', 'octate-stream')
+    # payload.set_payload((attach_file).read())
+    # attach_file.close()
+
+    payload=MIMEApplication(open(attach_file_name,"rb").read())
+
+    encoders.encode_base64(payload)
+
+    #add payload header with filename
+    # payload.add_header('Content-Decomposition', 'attachment', filename='attachment.csv')
+    # message.attach(payload)
+
+    # Add header to variable with attachment file
+    payload.add_header('Content-Disposition', 'attachment', filename= 'entry-' + attachmentmsg + '.csv')
+    # Then attach to message attachment file    
+    message.attach(payload)
+    
+
+    #Create SMTP session for sending the mail
+    session = smtplib.SMTP('smtp.gmail.com', 587) #use gmail with port
+    session.starttls() #enable security
+    session.ehlo()
+    session.login(sender_address, sender_pass) #login with mail_id and password
+    text = message.as_string()
+    session.sendmail(sender_address, receiver_address, text)
+    session.quit()
+    print('Mail Sent')
 
 
 if submit:     
     st.write("Your input:")
     predict()
+    email()
