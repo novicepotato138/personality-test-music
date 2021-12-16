@@ -242,7 +242,7 @@ def predict():
 
     st.write("Thank you for trying this predictor! Kindly fill in the feedback form over here. Your feedback is highly appreciated.")
     st.write("[Link to the form](https://forms.gle/xDK1VYjnt623NmVaA)")
-    st.write("Please include the test ID below when you are feeling the feedback form")
+    st.write("Please include the test ID below when you are filling the feedback form")
     st.code(input_id)
 
 def email():
