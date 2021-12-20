@@ -37,6 +37,7 @@ st.markdown(
 )
 
 
+st.image('logo-hybrid.png', width=200)
 st.title("Predict Your Personality Through Your Music Preference")
 st.write("Created by : Woon Jia Xin")
 st.write("Supervised by : Dr. Siti Soraya binti Abdul Rahman")
@@ -240,9 +241,9 @@ def predict():
     st.markdown("• **Openness to Experience (O)** is the personality trait of seeking new experience and intellectual pursuits. High scores may day dream a lot. Low scorers may be very down to earth.")
     st.header(" ")
 
-    st.write("Thank you for trying this predictor! Kindly fill in the feedback form over here. Your feedback is highly appreciated.")
+    st.write("We sincerely thank you for using MusicMind. Please complete user acceptance test over the link below. Your feedback is highly appreciated.")
     st.write("[Link to the form](https://forms.gle/xDK1VYjnt623NmVaA)")
-    st.write("Please include the test ID below when you are filling the feedback form")
+    st.write("Please include the test ID below when you are filling the acceptance test form.")
     st.code(input_id)
 
 def email():
