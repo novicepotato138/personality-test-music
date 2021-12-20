@@ -12,7 +12,7 @@ from email import encoders
 import pickle
 
 
-st.set_page_config(layout="centered", initial_sidebar_state="expanded")
+st.set_page_config(page_title='MusicMind', page_icon='brainstorm.png', layout="centered", initial_sidebar_state="expanded")
 
 # set time as user come in
 time = datetime.datetime.now()
