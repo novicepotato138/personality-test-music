@@ -73,7 +73,7 @@ qc2 = st.sidebar.radio('1. Bluegrass',('1', '2', '3', '4', '5', '6', '7'))
 st.sidebar.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
 
 st.sidebar.video('https://www.youtube.com/watch?v=OIW4ARVbhrw')
-qc3 = st.sidebar.radio('2. Blue.',('1', '2', '3', '4', '5', '6', '7'))
+qc3 = st.sidebar.radio('2. Blue',('1', '2', '3', '4', '5', '6', '7'))
 st.sidebar.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
 
 st.sidebar.video('https://www.youtube.com/watch?v=qr0f6t2UbOo')
