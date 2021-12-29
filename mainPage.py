@@ -59,7 +59,7 @@ age = st.sidebar.selectbox('What is your age?', ('Choose an option', 'Under 18 y
 duration = st.sidebar.selectbox('How long do you spend listening to music on a daily basis?', ('Choose an option', '<1 hours', '1-3 hours', '>3 hours'))
 
 st.sidebar.header('Part B: Music Preference')
-st.sidebar.write('Please indicate your basic preference for each of the following genres using the scale provided.')
+st.sidebar.write('Please indicate your basic preference for each of the following genres using the scale provided. Example video of each genre is given as a guide if you are not familiar with the genre.')
 # image
 img = Image.open('frame3.png')
 st.sidebar.image(img)
@@ -69,92 +69,92 @@ st.sidebar.image(img)
 # st.sidebar.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
 
 st.sidebar.video('https://www.youtube.com/watch?v=LnI3b9aHV9Q')
-qc2 = st.sidebar.radio('1. How much do you like the the genre, Bluegrass or the music in Video 2.',('1', '2', '3', '4', '5', '6', '7'))
+qc2 = st.sidebar.radio('1. Bluegrass',('1', '2', '3', '4', '5', '6', '7'))
 st.sidebar.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
 
 st.sidebar.video('https://www.youtube.com/watch?v=OIW4ARVbhrw')
-qc3 = st.sidebar.radio('2. How much do you like the the genre, Blue or the music in Video 3.',('1', '2', '3', '4', '5', '6', '7'))
+qc3 = st.sidebar.radio('2. Blue.',('1', '2', '3', '4', '5', '6', '7'))
 st.sidebar.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
 
 st.sidebar.video('https://www.youtube.com/watch?v=qr0f6t2UbOo')
-qc4 = st.sidebar.radio('3. How much do you like the the genre, Classical or the music in Video 4.',('1', '2', '3', '4', '5', '6', '7'))
+qc4 = st.sidebar.radio('3. Classical',('1', '2', '3', '4', '5', '6', '7'))
 st.sidebar.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
 
 st.sidebar.video('https://www.youtube.com/watch?v=jh169rVMveA')
-qc5 = st.sidebar.radio('4. How much do you like the the genre, Country or the music in Video 5.',('1', '2', '3', '4', '5', '6', '7'))
+qc5 = st.sidebar.radio('4. Country',('1', '2', '3', '4', '5', '6', '7'))
 st.sidebar.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
 
 st.sidebar.video('https://www.youtube.com/watch?v=gCYcHz2k5x0')
-qc6 = st.sidebar.radio('5. How much do you like the the genre, Dance/Electronica or the music in Video 6.',('1', '2', '3', '4', '5', '6', '7'))
+qc6 = st.sidebar.radio('5. Dance/Electronica',('1', '2', '3', '4', '5', '6', '7'))
 st.sidebar.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
 
 st.sidebar.video('https://www.youtube.com/watch?v=kMLm6ti4e10')
-qc7 = st.sidebar.radio('6. How much do you like the the genre, Folk or the music in Video 7.',('1', '2', '3', '4', '5', '6', '7'))
+qc7 = st.sidebar.radio('6. Folk',('1', '2', '3', '4', '5', '6', '7'))
 st.sidebar.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
 
 
 st.sidebar.video('https://www.youtube.com/watch?v=6sIjSNTS7Fs')
-qc8 = st.sidebar.radio('7. How much do you like the the genre, Funk or the music in Video 8.',('1', '2', '3', '4', '5', '6', '7'))
+qc8 = st.sidebar.radio('7. Funk',('1', '2', '3', '4', '5', '6', '7'))
 st.sidebar.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
 
 st.sidebar.video('https://www.youtube.com/watch?v=3tH195XLrWE&list=PLi7ihgkEws7T4pgoO2GOKTx5zalJl8p8A')
-qc9 = st.sidebar.radio('8. How much do you like the the genre, Gospel or the music in Video 9.',('1', '2', '3', '4', '5', '6', '7'))
+qc9 = st.sidebar.radio('8. Gospel',('1', '2', '3', '4', '5', '6', '7'))
 st.sidebar.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
 
 st.sidebar.video('https://www.youtube.com/watch?v=h2LG7JXK5mQ')
-qc10 = st.sidebar.radio('9. How much do you like the the genre, Heavy Metal or the music in Video 10.',('1', '2', '3', '4', '5', '6', '7'))
+qc10 = st.sidebar.radio('9. Heavy Metal',('1', '2', '3', '4', '5', '6', '7'))
 st.sidebar.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
 
 st.sidebar.video('https://www.youtube.com/watch?v=JBxreBgrJSA')
-qc11 = st.sidebar.radio('10. How much do you like the the genre, World or the music in Video 11.',('1', '2', '3', '4', '5', '6', '7'))
+qc11 = st.sidebar.radio('10. World',('1', '2', '3', '4', '5', '6', '7'))
 st.sidebar.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
 
 st.sidebar.video('https://www.youtube.com/watch?v=iA8lgca-3RM')
-qc12 = st.sidebar.radio('11. How much do you like the the genre, Jazz or the music in Video 12.',('1', '2', '3', '4', '5', '6', '7'))
+qc12 = st.sidebar.radio('11. Jazz',('1', '2', '3', '4', '5', '6', '7'))
 st.sidebar.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
 
 st.sidebar.video('https://www.youtube.com/watch?v=Jl8iYAo90pE')
-qc13 = st.sidebar.radio('12. How much do you like the the genre, New Age or the music in Video 13.',('1', '2', '3', '4', '5', '6', '7'))
+qc13 = st.sidebar.radio('12. New Age',('1', '2', '3', '4', '5', '6', '7'))
 st.sidebar.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
 
 st.sidebar.video('https://www.youtube.com/watch?v=5GWDgirgsq4')
-qc14 = st.sidebar.radio('13. How much do you like the the genre, Oldies or the music in Video 14.',('1', '2', '3', '4', '5', '6', '7'))
+qc14 = st.sidebar.radio('13. Oldies',('1', '2', '3', '4', '5', '6', '7'))
 st.sidebar.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
 
 st.sidebar.video('https://www.youtube.com/watch?v=yiTFXTNzOI0')
-qc15 = st.sidebar.radio('14. How much do you like the the genre, Opera or the music in Video 15.',('1', '2', '3', '4', '5', '6', '7'))
+qc15 = st.sidebar.radio('14. Opera',('1', '2', '3', '4', '5', '6', '7'))
 st.sidebar.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
 
 st.sidebar.video('https://www.youtube.com/watch?v=vS0YXAfUo4k')
-qc16 = st.sidebar.radio('15. How much do you like the the genre, Pop or the music in Video 16.',('1', '2', '3', '4', '5', '6', '7'))
+qc16 = st.sidebar.radio('15. Pop',('1', '2', '3', '4', '5', '6', '7'))
 st.sidebar.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
 
 st.sidebar.video('https://www.youtube.com/watch?v=tZ4V3RrCev8')
-qc17 = st.sidebar.radio('16. How much do you like the the genre, Punk or the music in Video 17.',('1', '2', '3', '4', '5', '6', '7'))
+qc17 = st.sidebar.radio('16. Punk',('1', '2', '3', '4', '5', '6', '7'))
 st.sidebar.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
 
 st.sidebar.video('https://www.youtube.com/watch?v=FvRI37xLBjU')
-qc18 = st.sidebar.radio('17. How much do you like the the genre, Rap/Hip Hop or the music in Video 18.',('1', '2', '3', '4', '5', '6', '7'))
+qc18 = st.sidebar.radio('17. Rap/Hip Hop',('1', '2', '3', '4', '5', '6', '7'))
 st.sidebar.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
 
 st.sidebar.video('https://www.youtube.com/watch?v=HNBCVM4KbUM')
-qc19 = st.sidebar.radio('18. How much do you like the the genre, Reggae or the music in Video 19.',('1', '2', '3', '4', '5', '6', '7'))
+qc19 = st.sidebar.radio('18. Reggae',('1', '2', '3', '4', '5', '6', '7'))
 st.sidebar.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
 
 st.sidebar.video('https://www.youtube.com/watch?v=COQ6cni_TG8')
-qc20 = st.sidebar.radio('19. How much do you like the the genre, Religious or the music in Video 20.',('1', '2', '3', '4', '5', '6', '7'))
+qc20 = st.sidebar.radio('19. Religious',('1', '2', '3', '4', '5', '6', '7'))
 st.sidebar.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
 
 st.sidebar.video('https://www.youtube.com/watch?v=7nqcL0mjMjw')
-qc21 = st.sidebar.radio('20. How much do you like the the genre, Rock or the music in Video 21.',('1', '2', '3', '4', '5', '6', '7'))
+qc21 = st.sidebar.radio('20. Rock',('1', '2', '3', '4', '5', '6', '7'))
 st.sidebar.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
 
 st.sidebar.video('https://www.youtube.com/watch?v=MssKkD3Ykg8')
-qc22 = st.sidebar.radio('21. How much do you like the the genre, Soul/R&B or the music in Video 22.',('1', '2', '3', '4', '5', '6', '7'))
+qc22 = st.sidebar.radio('21. Soul/R&B',('1', '2', '3', '4', '5', '6', '7'))
 st.sidebar.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
 
 st.sidebar.video('https://www.youtube.com/watch?v=c56t7upa8Bk&list=OLAK5uy_kzIUyhcmhq2z13VRW6uIvdTxgHM0r2vCQ')
-qc23 = st.sidebar.radio('22. How much do you like the the genre, Soundtracks/Theme Song or the music in Video 23.',('1', '2', '3', '4', '5', '6', '7'))
+qc23 = st.sidebar.radio('22. Soundtracks/Theme Song',('1', '2', '3', '4', '5', '6', '7'))
 st.sidebar.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
 
 # st.sidebar.video('https://www.youtube.com/watch?v=YxmsRbInkF4&list=OLAK5uy_lEmoWg3fL6OaCarWMvQ55LjfAiJmKFixY')
