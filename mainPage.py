@@ -73,7 +73,7 @@ qc2 = st.sidebar.radio('1. Bluegrass',('1', '2', '3', '4', '5', '6', '7'))
 st.sidebar.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
 
 st.sidebar.video('https://www.youtube.com/watch?v=OIW4ARVbhrw')
-qc3 = st.sidebar.radio('2. Blue',('1', '2', '3', '4', '5', '6', '7'))
+qc3 = st.sidebar.radio('2. Blues',('1', '2', '3', '4', '5', '6', '7'))
 st.sidebar.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
 
 st.sidebar.video('https://www.youtube.com/watch?v=qr0f6t2UbOo')
@@ -97,7 +97,7 @@ st.sidebar.video('https://www.youtube.com/watch?v=6sIjSNTS7Fs')
 qc8 = st.sidebar.radio('7. Funk',('1', '2', '3', '4', '5', '6', '7'))
 st.sidebar.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
 
-st.sidebar.video('https://www.youtube.com/watch?v=3tH195XLrWE&list=PLi7ihgkEws7T4pgoO2GOKTx5zalJl8p8A')
+st.sidebar.video('https://www.youtube.com/watch?v=yJpbb8ZKgwA')
 qc9 = st.sidebar.radio('8. Gospel',('1', '2', '3', '4', '5', '6', '7'))
 st.sidebar.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
 
@@ -129,7 +129,7 @@ st.sidebar.video('https://www.youtube.com/watch?v=vS0YXAfUo4k')
 qc16 = st.sidebar.radio('15. Pop',('1', '2', '3', '4', '5', '6', '7'))
 st.sidebar.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
 
-st.sidebar.video('https://www.youtube.com/watch?v=tZ4V3RrCev8')
+st.sidebar.video('https://www.youtube.com/watch?v=g7KrBgnjaLY')
 qc17 = st.sidebar.radio('16. Punk',('1', '2', '3', '4', '5', '6', '7'))
 st.sidebar.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
 
@@ -244,7 +244,7 @@ def predict():
     st.header(" ")
 
     st.write("We sincerely thank you for using MusicMind. Please complete user acceptance test over the link below. Your feedback is highly appreciated.")
-    st.write("[Link to the form](https://forms.gle/xDK1VYjnt623NmVaA)")
+    st.write("[Link to the form](https://forms.gle/1YCWwkGhqCERC3jSA)")
     st.write("Please include the test ID below when you are filling the acceptance test form.")
     st.code(input_id)
 
