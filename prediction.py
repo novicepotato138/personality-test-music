@@ -8,14 +8,14 @@ def predict(params):
     X2 = generate_X2(params)
     models = pickle.load(open('pickle_model.pkl','rb'))
 
-    st.dataframe(data=X2)
+    st.dataframe(data=X2.iloc[:, :5])
     st.markdown("""<hr style="height:4px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)
     st.title('Prediction Results:')
 
     pred = []
-    model_to_use = [X2, X1, X1, X1, X2]
+    df_to_use = [X2, X1, X1, X1, X2]
     for i in range(len(models)):
-        prediction = models[i].predict(model_to_use[i])
+        prediction = models[i].predict(df_to_use[i])
         # st.write(label[i], prediction[0])
         pred.append(prediction[0])
 

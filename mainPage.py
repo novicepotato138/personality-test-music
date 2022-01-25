@@ -10,7 +10,7 @@ from email.mime.base import MIMEBase
 from email.mime.application import MIMEApplication
 from email import encoders
 import pickle
-import sendEmail, calculation, prediction
+import sendEmail, prediction
 
 # Header
 st.set_page_config(page_title='MusicMind', page_icon='brainstorm.png', layout="centered", initial_sidebar_state="expanded")
@@ -159,7 +159,6 @@ input = (
     qc21, qc22, qc23
     )
 submitBtn = st.sidebar.button('Predict my personality')
-calculation.calculateMUSIC(input)
 
 if submitBtn:
     if location=='Choose an option' or gender=='Choose an option' or isMusician=='Choose an option' or age=='Choose an option':

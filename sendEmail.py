@@ -38,12 +38,16 @@ def sendEmail(time_msg, input_id, attachmentmsg):
     # Then attach to message attachment file    
     message.attach(payload)
 
-    #Create SMTP session for sending the mail
-    session = smtplib.SMTP('smtp.gmail.com', 587) #use gmail with port
-    session.starttls() #enable security
-    session.ehlo()
-    session.login(sender_address, sender_pass) #login with mail_id and password
-    text = message.as_string()
-    session.sendmail(sender_address, receiver_address, text)
-    session.quit()
-    print('Mail Sent')
+
+    # Error Handling
+    try:
+        session = smtplib.SMTP('smtp.gmail.com', 587) #use gmail with port
+        session.starttls() #enable security
+        session.ehlo()
+        session.login(sender_address, sender_pass) #login with mail_id and password
+        text = message.as_string()
+        session.sendmail(sender_address, receiver_address, text)
+        session.quit()
+        print('Mail Sent')
+    except: 
+        print('Mail Not Sent')
