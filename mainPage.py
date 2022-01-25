@@ -44,10 +44,10 @@ st.write("Supervised by : Dr. Siti Soraya binti Abdul Rahman")
 
 st.sidebar.header('Part A: Demographic Background')
 
-location = st.sidebar.selectbox('Where are you from?', ('Choose an option','Malaysia', 'Other'), key="get_loc")
-gender = st.sidebar.selectbox('Which gender do you identify most with?', ('Choose an option', 'Male', 'Female', 'Rather not to say'), key="get_gender")
-isMusician = st.sidebar.selectbox('Are you a musician?', ('Choose an option', 'Yes','No'), key="get_is_musician")
-age = st.sidebar.selectbox('What is your age?', ('Choose an option', 'Under 18 years old','18-24 years old', '25-34 years old', '35-44 years old', '45-54 years old', 'Above 55 years old'), key="get_age")
+location = st.sidebar.selectbox('Where are you from?', ('Choose an option','Malaysia', 'Asia (Other than Malaysia)', 'Australia', 'Europe', 'North America', 'South America'), key="get_loc")
+gender = st.sidebar.selectbox('Which gender do you identify most with?', ('Choose an option', 'Male', 'Female', 'Rather not to say'))
+isMusician = st.sidebar.selectbox('Are you a musician?', ('Choose an option', 'Yes','No'))
+age = st.sidebar.selectbox('What is your age?', ('Choose an option', 'Under 18 years old','18-24 years old', '25-34 years old', '35-44 years old', '45-54 years old', 'Above 55 years old'))
 
 st.sidebar.header('Part B: Music Preference')
 st.sidebar.write('Please indicate your basic preference for each of the following genres using the scale provided. Example video of each genre is given as a guide if you are not familiar with the genre.')

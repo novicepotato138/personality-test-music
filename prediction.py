@@ -51,7 +51,7 @@ def generate_X1(params):
     "1" if location == "Asia (Other than Malaysia)" else "0", "1" if location == "Australia" else "0", "1" if location == "Europe" else "0", "1" if location == "Malaysia" else "0", "1" if location == "North America" else "0", "1" if location == "South America" else "0",
     "1" if gender == "Female" else "0", "1" if gender == "Male" else "0", "1" if gender == "Prefer not to say" else "0"
     "1" if isMusician == "No" else "0", "1" if isMusician == "Yes" else "0"
-    "1" if age == "18 - 24" else "0", "1" if age == "25 - 34" else "0", "1" if age == "35 - 44" else "0", "1" if age == "45 - 54" else "0", "1" if age == "Above 55" else "0", "1" if age == "Under 18" else "0"
+    "1" if age == "18-24 years old" else "0", "1" if age == "25-34 years old" else "0", "1" if age == "35-44 years old" else "0", "1" if age == "45-54 years old" else "0", "1" if age == "Above 55 years old" else "0", "1" if age == "Under 18 years old" else "0"
     ])
     txtFile.write(arrangement)
     txtFile.close()
