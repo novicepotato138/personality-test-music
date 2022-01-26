@@ -4,6 +4,7 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.base import MIMEBase
 from email.mime.application import MIMEApplication
 from email import encoders
+import os
 
 def sendEmail(time_msg, input_id, attachmentmsg):
     # x = datetime.datetime.now()
@@ -21,12 +22,12 @@ def sendEmail(time_msg, input_id, attachmentmsg):
     message = MIMEMultipart()
     message['From'] = sender_address
     message['To'] = receiver_address
-    message['Subject'] = "[Questionnaire entry] " + time_msg
+    message['Subject'] = "[Questionnaire entry: "+ input_id + "] " + time_msg
 
     #The subject line
     #The body and the attachments for the mail
     message.attach(MIMEText(mail_content, 'plain'))
-    attach_file_name = 'data.csv'
+    attach_file_name = 'X1.csv'
 
     payload=MIMEApplication(open(attach_file_name,"rb").read())
 
@@ -34,7 +35,7 @@ def sendEmail(time_msg, input_id, attachmentmsg):
 
 
     # Add header to variable with attachment file
-    payload.add_header('Content-Disposition', 'attachment', filename= 'entry-' + attachmentmsg + '.csv')
+    payload.add_header('Content-Disposition', 'attachment', filename=input_id+'.csv')
     # Then attach to message attachment file    
     message.attach(payload)
 
@@ -49,5 +50,9 @@ def sendEmail(time_msg, input_id, attachmentmsg):
         session.sendmail(sender_address, receiver_address, text)
         session.quit()
         print('Mail Sent')
+
+        # remove file
+        if os.path.isfile("X1.csv"):
+            os.remove("X1.csv")
     except: 
         print('Mail Not Sent')
