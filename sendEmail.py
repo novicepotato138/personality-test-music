@@ -26,7 +26,7 @@ def sendEmail(time_msg, input_id, attachmentmsg):
     #The subject line
     #The body and the attachments for the mail
     message.attach(MIMEText(mail_content, 'plain'))
-    attach_file_name = 'data.csv'
+    attach_file_name = 'X1.csv'
 
     payload=MIMEApplication(open(attach_file_name,"rb").read())
 
