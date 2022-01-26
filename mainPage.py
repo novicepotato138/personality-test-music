@@ -177,11 +177,11 @@ if submitBtn:
         col5.write('Neuroticism \n')
 
         col1, col2, col3, col4, col5 = st.columns(5)
-        col1.header(round(pred[0], 4))
-        col2.header(round(pred[1], 4))
-        col3.header(round(pred[2], 4))
-        col4.header(round(pred[3], 4))
-        col5.header(round(pred[4], 4))
+        col1.header(round(pred[0], 2))
+        col2.header(round(pred[1], 2))
+        col3.header(round(pred[2], 2))
+        col4.header(round(pred[3], 2))
+        col5.header(round(pred[4], 2))
         st.header(" ")
 
         label = ['Openness to Experience (O)', 'Conscientiousness (C)', 'Extroversion (E)', 'Agreableness (A)', 'Neuroticism (N)']
