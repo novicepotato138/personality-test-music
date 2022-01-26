@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import pickle
-
+import os
 
 def predict(params):
     X1 = generate_X1(params)
@@ -42,6 +42,10 @@ def generate_X1(params):
     intense = round(intense, 4)
     contemporary = round(contemporary, 4)
 
+    # remove file
+    if os.path.isfile("X1.csv"):
+        os.remove("X1.csv")
+
     # forming DataFrame for prediction
     txtFile = open(r'X1.csv', 'w')
 
@@ -56,7 +60,13 @@ def generate_X1(params):
     txtFile.close()
 
     # perform prediction
-    return pd.read_csv("X1.csv")
+    df = pd.read_csv("X1.csv")
+
+    # remove file
+    if os.path.isfile("X1.csv"):
+        os.remove("X1.csv")
+
+    return df
     
 
 def generate_X2(params):
@@ -79,6 +89,10 @@ def generate_X2(params):
     intense = round(intense, 4)
     contemporary = round(contemporary, 4)
 
+    # remove file
+    if os.path.isfile("X1.csv"):
+        os.remove("X1.csv")
+
     # forming DataFrame for prediction
     txtFile = open(r'X2.csv', 'w')
 
@@ -93,5 +107,10 @@ def generate_X2(params):
     txtFile.close()
 
     # perform prediction
-    return pd.read_csv("X2.csv")
+    df = pd.read_csv("X2.csv")
 
+    # remove file after reading
+    if os.path.isfile("X2.csv"):
+        os.remove("X2.csv")
+
+    return df
