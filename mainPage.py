@@ -197,6 +197,17 @@ if submitBtn:
         fig.update_traces(fill='toself')
         st.write(fig)
 
+        st.write("We sincerely thank you for using MusicMind. Please complete user acceptance test (UAT) over the link below. Your feedback is highly appreciated.")
+        st.markdown(
+            """
+            <a href='https://forms.gle/1YCWwkGhqCERC3jSA'><button>Answer UAT Here</button></a>
+            """,
+        unsafe_allow_html=True,
+        )
+        # st.write("[Link to the form](https://forms.gle/1YCWwkGhqCERC3jSA)")
+        st.write("Please include the test ID below when you are filling the acceptance test form.")
+        st.code(input_id)
+
 
         st.write('Description of each trait:')
         st.markdown("• **Extroversion (E)** is the personality trait of seeking fulfillment from sources outside the self or in community. High scorers tend to be very social while low scorers prefer to work on their projects alone.")
@@ -206,7 +217,4 @@ if submitBtn:
         st.markdown("• **Openness to Experience (O)** is the personality trait of seeking new experience and intellectual pursuits. High scores may day dream a lot. Low scorers may be very down to earth.")
         st.header(" ")
 
-        st.write("We sincerely thank you for using MusicMind. Please complete user acceptance test over the link below. Your feedback is highly appreciated.")
-        st.write("[Link to the form](https://forms.gle/1YCWwkGhqCERC3jSA)")
-        st.write("Please include the test ID below when you are filling the acceptance test form.")
-        st.code(input_id)
+        
