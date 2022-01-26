@@ -41,7 +41,7 @@ st.image('logo-hybrid.png', width=200)
 st.title("Predict Your Personality Through Your Music Preference")
 st.write("Created by : Woon Jia Xin")
 st.write("Supervised by : Dr. Siti Soraya binti Abdul Rahman")
-st.text('version 1.0.1')
+st.text('version 1.0.2')
 
 
 st.sidebar.header('Part A: Demographic Background')
