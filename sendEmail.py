@@ -22,7 +22,7 @@ def sendEmail(time_msg, input_id, attachmentmsg):
     message = MIMEMultipart()
     message['From'] = sender_address
     message['To'] = receiver_address
-    message['Subject'] = "[Questionnaire entry] " + time_msg
+    message['Subject'] = "[Questionnaire entry: "+ input_id + "] " + time_msg
 
     #The subject line
     #The body and the attachments for the mail
@@ -35,7 +35,7 @@ def sendEmail(time_msg, input_id, attachmentmsg):
 
 
     # Add header to variable with attachment file
-    payload.add_header('Content-Disposition', 'attachment', filename= 'entry-' + attachmentmsg + '.csv')
+    payload.add_header('Content-Disposition', 'attachment', filename=input_id+'.csv')
     # Then attach to message attachment file    
     message.attach(payload)
 
