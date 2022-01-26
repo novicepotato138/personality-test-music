@@ -42,10 +42,6 @@ def generate_X1(params):
     intense = round(intense, 4)
     contemporary = round(contemporary, 4)
 
-    # remove file
-    if os.path.isfile("X1.csv"):
-        os.remove("X1.csv")
-
     # forming DataFrame for prediction
     txtFile = open(r'X1.csv', 'w')
 
@@ -88,8 +84,8 @@ def generate_X2(params):
     contemporary = round(contemporary, 4)
 
     # remove file
-    if os.path.isfile("X1.csv"):
-        os.remove("X1.csv")
+    if os.path.isfile("X2.csv"):
+        os.remove("X2.csv")
 
     # forming DataFrame for prediction
     txtFile = open(r'X2.csv', 'w')
