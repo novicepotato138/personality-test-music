@@ -62,9 +62,7 @@ def generate_X1(params):
     # perform prediction
     df = pd.read_csv("X1.csv")
 
-    # remove file
-    if os.path.isfile("X1.csv"):
-        os.remove("X1.csv")
+    # X1.csv will be remove at sendEmail.py after email is sent!
 
     return df
     

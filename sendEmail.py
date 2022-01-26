@@ -4,6 +4,7 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.base import MIMEBase
 from email.mime.application import MIMEApplication
 from email import encoders
+import os
 
 def sendEmail(time_msg, input_id, attachmentmsg):
     # x = datetime.datetime.now()
@@ -49,5 +50,9 @@ def sendEmail(time_msg, input_id, attachmentmsg):
         session.sendmail(sender_address, receiver_address, text)
         session.quit()
         print('Mail Sent')
+
+        # remove file
+        if os.path.isfile("X1.csv"):
+            os.remove("X1.csv")
     except: 
         print('Mail Not Sent')
