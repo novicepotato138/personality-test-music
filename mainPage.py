@@ -41,9 +41,11 @@ st.image('logo-hybrid.png', width=200)
 st.title("Predict Your Personality Through Your Music Preference")
 st.write("Created by : Woon Jia Xin")
 st.write("Supervised by : Dr. Siti Soraya binti Abdul Rahman")
-st.text('version 1.0.1')
+st.text('version 1.0.2')
 
-
+st.sidebar.header("Instructions")
+st.sidebar.write("There are total of 2 sections. Answer all questions provided below.")
+st.sidebar.write("It is recommended to use your laptop or desktop to use MusicMind for better experience.")
 st.sidebar.header('Part A: Demographic Background')
 
 location = st.sidebar.selectbox('Where are you from?', ('Choose an option','Malaysia', 'Asia (Other than Malaysia)', 'Australia', 'Europe', 'North America', 'South America'), key="get_loc")
@@ -161,6 +163,9 @@ input = (
     qc21, qc22, qc23
     )
 submitBtn = st.sidebar.button('Predict my personality')
+st.sidebar.write("Remember to close this sidebar to see your result at the main page.")
+
+
 
 if submitBtn:
     if location=='Choose an option' or gender=='Choose an option' or isMusician=='Choose an option' or age=='Choose an option':
