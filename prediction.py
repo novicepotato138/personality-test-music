@@ -6,7 +6,7 @@ import os
 def predict(params):
     X1 = generate_X1(params)
     X2 = generate_X2(params)
-    models = pickle.load(open('pickle_model.pkl','rb'))
+    models = pickle.load(open('pickle_model_final.pkl','rb'))
 
     st.dataframe(data=X2.iloc[:, :5])
     st.markdown("""<hr style="height:4px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)
